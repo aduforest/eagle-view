@@ -1,16 +1,10 @@
-import React, { Component } from 'react';
-// import Loadable from 'react-loadable';
-import dynamic from 'next/dynamic'
-const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
+import React, { Component } from "react";
+import Router from "next/router";
 
+export default function Index() {
+  React.useEffect(() => {
+    Router.push("/admin/dashboard");
+  });
 
-
-// Containers
-const DefaultLayoutWithDynamic = dynamic(
-  import('../components/Home'),
-  {
-    loading: loading
-  }
-)
-
-export default DefaultLayoutWithDynamic;
+  return <div />;
+}

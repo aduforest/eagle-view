@@ -1,234 +1,275 @@
-This project was bootstrapped with [Create Next App](https://github.com/segmentio/create-next-app).
+# [NextJS Argon Dashboard](https://demos.creative-tim.com/nextjs-argon-dashboard?ref=njsad-github-readme) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=NextJS%20Argon%20Dashboard%20is%20a%20Free%20NextJS%204,%20Bootstrap%204,%20React%20and%20Reactstrap%20Dashboard%20%E2%9D%A4%EF%B8%8F%0Ahttps%3A//demos.creative-tim.com/nextjs-argon-dashboard-%20%23react%20%23reactstrap%20%23nextjs%20%23argon%20%23argondesign%20%23reactdashboard%20%23argonreact%20%23reactdesign%20%23bootstrap%20%23uikit%20%23freebie%20%20via%20%40CreativeTim)
 
-Find the most recent version of this guide at [here](https://github.com/segmentio/create-next-app/blob/master/lib/templates/default/README.md). And check out [Next.js repo](https://github.com/zeit/next.js) for the most up-to-date info.
+
+ ![version](https://img.shields.io/badge/version-1.1.0-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/nextjs-argon-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/nextjs-argon-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/argon-nextjs-argon-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/argon-nextjs-argon-dashboard/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+
+
+![Product Image](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nextjs-argon-dashboard/nextjs-argon-dashboard.jpg)
+
+Start your development with a Dashboard for [NextJS](https://nextjs.org/?ref=creativetim), [Bootstrap 4](https://getbootstrap.com/?ref=creativetim), [React](https://reactjs.org/?ref=creativetim) and [Reactstrap](https://reactstrap.github.io/?ref=creativetim). It is open source, free and it features many components that can help you create amazing websites.
+
+**Fully Coded Components**
+
+NextJS Argon Dashboard is built with over 100 individual components, giving you the freedom of choosing and combining. All components can take variations in color, that you can easily modify using SASS files.
+You will save a lot of time going from prototyping to full-functional code, because all elements are implemented. This Dashboard is coming with pre-built examples, so the development process is seamless, switching from our pages to the real website is very easy to be done.
+Every element has multiple states for colors, styles, hover, focus, that you can easily access and use.
+
+**Complex Documentation**
+
+Each element is well presented in a very complex documentation. You can read more about the idea behind this [dashboard here](https://www.creative-tim.com/learning-lab/nextjs/overview/argon-dashboard?ref=creativetim). You can check the [components here](https://www.creative-tim.com/learning-lab/nextjs/alerts/argon-dashboard?ref=creativetim) and the [foundation here](https://www.creative-tim.com/learning-lab/nextjs/colors/argon-dashboard?ref=creativetim).
+
+**Example Pages**
+
+If you want to get inspiration or just show something directly to your clients, you can jump start your development with our pre-built example pages. You will be able to quickly set up the basic structure for your web project.
+
 
 ## Table of Contents
 
-- [Questions? Feedback?](#questions-feedback)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
-  - [npm run dev](#npm-run-dev)
-  - [npm run build](#npm-run-build)
-  - [npm run start](#npm-run-start)
-- [Using CSS](#using-css)
-- [Adding Components](#adding-components)
-- [Fetching Data](#fetching-data)
-- [Custom Server](#custom-server)
-- [Syntax Highlighting](#syntax-highlighting)
-- [Using the `static` Folder](#using-the-static-folder)
-- [Deploy to Now](#deploy-to-now)
-- [Something Missing?](#something-missing)
+* [Versions](#versions)
+* [Demo](#demo)
+* [Quick Start](#quick-start)
+* [Documentation](#documentation)
+* [File Structure](#file-structure)
+* [Browser Support](#browser-support)
+* [Resources](#resources)
+* [Pro Versions](#pro-versions)
+* [Kit Versions](#kit-versions)
+* [Reporting Issues](#reporting-issues)
+* [Licensing](#licensing)
+* [Useful Links](#useful-links)
 
-## Questions? Feedback?
 
-Check out [Next.js FAQ & docs](https://github.com/zeit/next.js#faq) or [let us know](https://github.com/segmentio/create-next-app/issues) your feedback.
+## Versions
 
-## Folder Structure
 
-After creating an app, it should look something like:
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/aspnet-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-asp-net?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nodejs-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-nodejs?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-react?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-angular?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-native-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-react-native?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-dashboard?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-laravel?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/bootstrap-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/bootstrap-vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/bootstrap-vue-argon-dashboard?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/icon-django.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-django?ref=njsad-github-readme)
+
+
+
+| NextJS | ASP.NET | NodeJS | React  | Angular  |
+| --- | --- | --- | --- | --- |
+| [![Argon Dashboard Asp.net](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nextjs-argon-dashboard/nextjs-argon-dashboard.jpg)](https://www.creative-tim.com/product/nextjs-argon-dashboard) | [![Argon Dashboard Asp.net](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-aspnet/argon-dashboard-aspnet.jpg)](https://www.creative-tim.com/product/argon-dashboard-asp-net) | [![Argon Dashboard Nodejs](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-nodejs/argon-dashboard-nodejs.jpg)](https://www.creative-tim.com/product/argon-dashboard-nodejs) | [![Argon Dashboard React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-react/argon-dashboard-react.jpg)](https://www.creative-tim.com/product/argon-dashboard-react) | [![Argon Dashboard Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-angular/argon-dashboard-angular.jpg)](https://www.creative-tim.com/product/argon-dashboard-angular) |
+
+| React Native | VueJS | Laravel | Bootstrap  | BootstrapVue  | Django  |
+| --- | --- | --- | --- | --- | --- |
+| [![Argon React Native](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-react-native/arg-rn-thumbnail.jpg)](https://www.creative-tim.com/product/argon-react-native) | [![Vue Argon Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-dashboard/vue-argon-dashboard.jpg)](https://www.creative-tim.com/product/vue-argon-dashboard) | [![Argon Dashboard Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-laravel/argon-dashboard-laravel.jpg)](https://www.creative-tim.com/product/argon-dashboard-laravel) | [![Argon Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/argon-dashboard.jpg)](https://www.creative-tim.com/product/argon-dashboard) | [![BootstrapVue Argon Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/bootstrap-vue-argon-dashboard/bootstrap-vue-argon-dashboard.jpg)](https://www.creative-tim.com/product/bootstrap-vue-argon-dashboard) | [![Argon Dashboard Django](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-django/argon-dashboard-django.jpg)](https://www.creative-tim.com/product/argon-dashboard-django) |
+
+
+## Demo
+
+- [Start page](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/dashboard)
+- [User profile page](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/profile)
+- [Tables page ](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/tables)
+- [Maps Page](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/maps)
+- [Login page](https://demos.creative-tim.com/nextjs-argon-dashboard/auth/login)
+
+[View More](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/dashboard).
+
+
+## Quick start
+
+- `npm i nextjs-argon-dashboard`
+- [Download from Github](https://github.com/creativetimofficial/nextjs-argon-dashboard/archive/master.zip).
+- [Download from Creative Tim](https://www.creative-tim.com/product/nextjs-argon-dashboard?ref=njsad-github-readme).
+- Install with [Bower](https://bower.io/?ref=creativetim): ```bower install nextjs-argon-dashboard```.
+- Clone the repo: `git clone https://github.com/creativetimofficial/nextjs-argon-dashboard.git`.
+
+
+## Documentation
+The documentation for the Material Kit is hosted at our [website](https://www.creative-tim.com/learning-lab/nextjs/overview/argon-dashboard).
+
+
+## File Structure
+Within the download you'll find the following directories and files:
 
 ```
+NextJS Argon Dashboard
 .
+├── CHANGELOG.md
+├── ISSUE_TEMPLATE.md
+├── LICENSE.md
 ├── README.md
+├── Documentation
+│   └── documentation.html
+├── assets
+│   ├── css
+│   │   ├── nextjs-argon-dashboard.css
+│   │   ├── nextjs-argon-dashboard.css.map
+│   │   └── nextjs-argon-dashboard.min.css
+│   ├── fonts
+│   ├── img
+│   │   ├── brand
+│   │   ├── icons
+│   │   │   └── common
+│   │   └── theme
+│   ├── plugins
+│   │   └── nucleo
+│   │       ├── css
+│   │       │   ├── nucleo-svg.css
+│   │       │   └── nucleo.css
+│   │       └── fonts
+│   └── scss
+│       ├── argon-dashboard
+│       │   ├── bootstrap
+│       │   │   ├── mixins
+│       │   │   └── utilities
+│       │   ├── custom
+│       │   │   ├── alerts
+│       │   │   ├── avatars
+│       │   │   ├── badges
+│       │   │   ├── buttons
+│       │   │   ├── cards
+│       │   │   ├── charts
+│       │   │   ├── close
+│       │   │   ├── custom-forms
+│       │   │   ├── dropdowns
+│       │   │   ├── footers
+│       │   │   ├── forms
+│       │   │   ├── headers
+│       │   │   ├── icons
+│       │   │   ├── list-groups
+│       │   │   ├── maps
+│       │   │   ├── masks
+│       │   │   ├── mixins
+│       │   │   ├── modals
+│       │   │   ├── navbars
+│       │   │   ├── navs
+│       │   │   ├── paginations
+│       │   │   ├── popovers
+│       │   │   ├── progresses
+│       │   │   ├── separators
+│       │   │   ├── tables
+│       │   │   ├── type
+│       │   │   ├── utilities
+│       │   │   └── vendors
+│       │   └── docs
+│       ├── nextjs-argon-dashboard.scss
+│       └── react
+│           ├── bootstrap
+│           ├── plugins
+│           └── react-differences.scss
 ├── components
-│   ├── head.js
-│   └── nav.js
-├── next.config.js
-├── node_modules
-│   ├── [...]
-├── package.json
+│   ├── Footers
+│   │   ├── AdminFooter.js
+│   │   └── AuthFooter.js
+│   ├── Headers
+│   │   ├── Header.js
+│   │   └── UserHeader.js
+│   ├── Navbars
+│   │   ├── AdminNavbar.js
+│   │   └── AuthNavbar.js
+│   ├── PageChange
+│   │   └── PageChange.js
+│   └── Sidebar
+│       └── Sidebar.js
+├── layouts
+│   ├── Admin.js
+│   └── Auth.js
 ├── pages
-│   └── index.js
-├── static
-│   └── favicon.ico
-└── yarn.lock
+│   ├── 404.js
+│   ├── _app.js
+│   ├── _document.js
+│   ├── _error.js
+│   ├── admin
+│   │   ├── dashboard.js
+│   │   ├── icons.js
+│   │   ├── maps.js
+│   │   ├── profile.js
+│   │   └── tables.js
+│   ├── auth
+│   │   ├── login.js
+│   │   └── register.js
+│   └── index.js
+├── variables
+│   └── charts.js
+├── routes.js
+├── next.config.js
+└── package.json
+
 ```
 
-Routing in Next.js is based on the file system, so `./pages/index.js` maps to the `/` route and
-`./pages/about.js` would map to `/about`.
 
-The `./static` directory maps to `/static` in the `next` server, so you can put all your
-other static resources like images or compiled CSS in there.
+## Browser Support
 
-Out of the box, we get:
+At present, we officially aim to support the last two versions of the following browsers:
 
-- Automatic transpilation and bundling (with webpack and babel)
-- Hot code reloading
-- Server rendering and indexing of `./pages`
-- Static file serving. `./static/` is mapped to `/static/`
+<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
 
-Read more about [Next's Routing](https://github.com/zeit/next.js#routing)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Resources
+- Demo: <https://demos.creative-tim.com/nextjs-argon-dashboard/admin/dashboard?ref=njsad-github-readme>
+- Download Page: <https://www.creative-tim.com/product/nextjs-argon-dashboard?ref=njsad-github-readme>
+- Documentation: <https://www.creative-tim.com/learning-lab/nextjs/overview/argon-dashboard?ref=njsad-github-readme>
+- License Agreement: <https://www.creative-tim.com/license?ref=njsad-github-readme>
+- Support: <https://www.creative-tim.com/contact-us?ref=njsad-github-readme>
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/nextjs-argon-dashboard/issues?ref=creativetim)
 
-### `npm run dev`
+### PRO Versions
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nextjs.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/nextjs-argon-dashboard-pro?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nodejs-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-nodejs?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-angular?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-native-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-pro-react-native?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-dashboard-pro?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-laravel?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/bootstrap-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/bootstrap-vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/bootstrap-vue-argon-dashboard-pro?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nuxt.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/svelte.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-svelte?ref=njsad-github-readme)
 
-The page will reload if you make edits.<br>
-You will also see any errors in the console.
 
-### `npm run build`
 
-Builds the app for production to the `.next` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| NextJS | NodeJS | React  | Angular  | VueJS |
+| --- | --- | --- | --- | --- |
+| [![NextJS Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nextjs-argon-dashboard-pro/nextjs-argon-dashboard-pro.jpg)](https://www.creative-tim.com/product/nextjs-argon-dashboard-pro) | [![Argon Dashboard PRO Nodejs](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-nodejs/argon-dashboard-pro-nodejs.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-nodejs) | [![Argon Dashboard PRO React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-react/argon-dashboard-pro-react.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-react) | [![Argon Dashboard PRO Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-angular/opt_adp_angular_thumbnail.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-angular) | [![Vue Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-dashboard-pro/vue-argon-dashboard-pro.jpg)](https://www.creative-tim.com/product/vue-argon-dashboard-pro) |
 
-### `npm run start`
+| React Native | Laravel | Bootstrap  | BootstrapVue  | Nuxt  | Svelte  |
+| --- | --- | --- | --- | --- | --- |
+| [![Argon PRO React Native](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-pro-react-native/argp-rn-thumbnail.jpg)](https://www.creative-tim.com/product/argon-pro-react-native) | [![Argon Dashboard PRO Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-laravel/argon-dashboard-pro-laravel.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-laravel) | [![Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/argon-dashboard-pro.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro) | [![BootstrapVue Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/bootstrap-vue-argon-dashboard-pro/opt_badp_thumbnail.jpg)](https://www.creative-tim.com/product/bootstrap-vue-argon-dashboard-pro) | [![Nuxt Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nuxt-argon-dashboard-pro/nuxt-argon-dashboard-pro.jpg)](https://www.creative-tim.com/product/nuxt-argon-dashboard-pro) | [![Nuxt Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-svelte/argon-dashboard-pro-svelte.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-svelte) |
 
-Starts the application in production mode.
-The application should be compiled with \`next build\` first.
+### Kit Versions
 
-See the section in Next docs about [deployment](https://github.com/zeit/next.js/wiki/Deployment) for more information.
+#### FREE Kit Versions
 
-## Using CSS
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-angular?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-react?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-design-system?ref=njsad-github-readme)
 
-[`styled-jsx`](https://github.com/zeit/styled-jsx) is bundled with next to provide support for isolated scoped CSS. The aim is to support "shadow CSS" resembling of Web Components, which unfortunately [do not support server-rendering and are JS-only](https://github.com/w3c/webcomponents/issues/71).
+| HTML | Angular | React  | VueJS  |
+| --- | --- | --- | --- |
+| [![Argon Design System PRO HTML](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system/argon-design-system.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system?ref=njsad-github-readme)  | [![Argon Design System PRO Angular](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-angular/argon-design-system-angular.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-angular?ref=njsad-github-readme)  | [![Argon Design System PRO React](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-react/argon-design-system-react.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-react?ref=njsad-github-readme)  | [![Argon Design System PRO React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-design-system/vue-argon-design-system.jpg)](https://www.creative-tim.com/product/vue-argon-design-system?ref=njsad-github-readme)|
 
-```jsx
-export default () => (
-  <div>
-    Hello world
-    <p>scoped!</p>
-    <style jsx>{`
-      p {
-        color: blue;
-      }
-      div {
-        background: red;
-      }
-      @media (max-width: 600px) {
-        div {
-          background: blue;
-        }
-      }
-    `}</style>
-  </div>
-)
-```
+#### PRO Kit Versions
 
-Read more about [Next's CSS features](https://github.com/zeit/next.js#css).
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-pro?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-pro-angular?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-pro-react?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-design-system-pro?ref=njsad-github-readme)
 
-## Adding Components
+| HTML | Angular | React  | VueJS  |
+| --- | --- | --- | --- |
+| [![Argon Design System PRO HTML](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-pro/argon-design-system-pro.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-pro?ref=njsad-github-readme)  | [![Argon Design System PRO Angular](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-pro-angular/argon-design-system-pro-angular.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-pro-angular?ref=njsad-github-readme)  | [![Argon Design System PRO React](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-pro-react/argon-design-system-pro-react.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-pro-react?ref=njsad-github-readme)  | [![Argon Design System PRO React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-design-system-pro/opt_adsp_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-argon-design-system-pro?ref=njsad-github-readme)|
 
-We recommend keeping React components in `./components` and they should look like:
+## Reporting Issues
 
-### `./components/simple.js`
+We use GitHub Issues as the official bug tracker for the Material Kit. Here are some advices for our users that want to report an issue:
 
-```jsx
-const Simple = () => <div>Simple Component</div>
+1. Make sure that you are using the latest version of the Material Kit. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=njsad-github-readme).
+2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
+3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
-export default Simple // don't forget to export default!
-```
+## Licensing
 
-### `./components/complex.js`
+- Copyright 2021 Creative Tim (https://www.creative-tim.com/?ref=njsad-github-readme)
 
-```jsx
-import { Component } from 'react'
+- Licensed under MIT (https://github.com/creativetimofficial/nextjs-argon-dashboard/blob/master/LICENSE.md?ref=creativetim)
 
-class Complex extends Component {
-  state = {
-    text: 'World'
-  }
+## Useful Links
 
-  render() {
-    const { text } = this.state
-    return <div>Hello {text}</div>
-  }
-}
+- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w?ref=creativetim)
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=njsad-github-readme) (earn money)
+- [Blog Creative Tim](http://blog.creative-tim.com/?ref=njsad-github-readme)
+- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=njsad-github-readme) from Creative Tim
+- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=njsad-github-readme) from Creative Tim
+- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=njsad-github-readme) from Creative Tim
+- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=njsad-github-readme) from Creative Tim
+- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=njsad-github-readme) from Creative Tim
+- [More products](https://www.creative-tim.com/bootstrap-themes?ref=njsad-github-readme) from Creative Tim
+- Check our Bundles [here](https://www.creative-tim.com/bundles?ref=njsad-github-readme)
 
-export default Complex // don't forget to export default!
-```
+### Social Media
 
-## Fetching Data
+Twitter: <https://twitter.com/CreativeTim?ref=creativetim>
 
-You can fetch data in `pages` components using `getInitialProps` like this:
+Facebook: <https://www.facebook.com/CreativeTim?ref=creativetim>
 
-### `./pages/stars.js`
+Dribbble: <https://dribbble.com/creativetim?ref=creativetim>
 
-```jsx
-const Page = props => <div>Next stars: {props.stars}</div>
-
-Page.getInitialProps = async ({ req }) => {
-  const res = await fetch('https://api.github.com/repos/zeit/next.js')
-  const json = await res.json()
-  const stars = json.stargazers_count
-  return { stars }
-}
-
-export default Page
-```
-
-For the initial page load, `getInitialProps` will execute on the server only. `getInitialProps` will only be executed on the client when navigating to a different route via the `Link` component or using the routing APIs.
-
-_Note: `getInitialProps` can **not** be used in children components. Only in `pages`._
-
-Read more about [fetching data and the component lifecycle](https://github.com/zeit/next.js#fetching-data-and-component-lifecycle)
-
-## Custom Server
-
-Want to start a new app with a custom server? Run `create-next-app --example customer-server custom-app`
-
-Typically you start your next server with `next start`. It's possible, however, to start a server 100% programmatically in order to customize routes, use route patterns, etc
-
-This example makes `/a` resolve to `./pages/b`, and `/b` resolve to `./pages/a`:
-
-```jsx
-const { createServer } = require('http')
-const { parse } = require('url')
-const next = require('next')
-
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
-
-app.prepare().then(() => {
-  createServer((req, res) => {
-    // Be sure to pass `true` as the second argument to `url.parse`.
-    // This tells it to parse the query portion of the URL.
-    const parsedUrl = parse(req.url, true)
-    const { pathname, query } = parsedUrl
-
-    if (pathname === '/a') {
-      app.render(req, res, '/b', query)
-    } else if (pathname === '/b') {
-      app.render(req, res, '/a', query)
-    } else {
-      handle(req, res, parsedUrl)
-    }
-  }).listen(3000, err => {
-    if (err) throw err
-    console.log('> Ready on http://localhost:3000')
-  })
-})
-```
-
-Then, change your `start` script to `NODE_ENV=production node server.js`.
-
-Read more about [custom server and routing](https://github.com/zeit/next.js#custom-server-and-routing)
-
-## Syntax Highlighting
-
-To configure the syntax highlighting in your favorite text editor, head to the [relevant Babel documentation page](https://babeljs.io/docs/editors) and follow the instructions. Some of the most popular editors are covered.
-
-## Deploy to Now
-
-[now](https://zeit.co/now) offers a zero-configuration single-command deployment.
-
-1.  Install the `now` command-line tool either via the recommended [desktop tool](https://zeit.co/download) or via node with `npm install -g now`.
-
-2.  Run `now` from your project directory. You will see a **now.sh** URL in your output like this:
-
-    ```
-    > Ready! https://your-project-dirname-tpspyhtdtk.now.sh (copied to clipboard)
-    ```
-
-    Paste that URL into your browser when the build is complete, and you will see your deployed app.
-
-You can find more details about [`now` here](https://zeit.co/now).
-
-## Something Missing?
-
-If you have ideas for how we could improve this readme or the project in general, [let us know](https://github.com/segmentio/create-next-app/issues) or [contribute some!](https://github.com/segmentio/create-next-app/edit/master/lib/templates/default/README.md)
+Instagram: <https://www.instagram.com/CreativeTimOfficial?ref=creativetim>
