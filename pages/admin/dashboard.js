@@ -1,323 +1,269 @@
 import React from "react";
-// node.js library that concatenates classes (strings)
-import classnames from "classnames";
-// javascipt plugin for creating charts
-import Chart from "chart.js";
-// react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
-// reactstrap components
-import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  NavItem,
-  NavLink,
-  Nav,
-  Progress,
-  Table,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
+// react plugin for creating charts
+import ChartistGraph from "react-chartist";
+// @material-ui/core
+import { makeStyles } from "@material-ui/core/styles";
+import Icon from "@material-ui/core/Icon";
+// @material-ui/icons
+import Store from "@material-ui/icons/Store";
+import Warning from "@material-ui/icons/Warning";
+import DateRange from "@material-ui/icons/DateRange";
+import LocalOffer from "@material-ui/icons/LocalOffer";
+import Update from "@material-ui/icons/Update";
+import ArrowUpward from "@material-ui/icons/ArrowUpward";
+import AccessTime from "@material-ui/icons/AccessTime";
+import Accessibility from "@material-ui/icons/Accessibility";
+import BugReport from "@material-ui/icons/BugReport";
+import Code from "@material-ui/icons/Code";
+import Cloud from "@material-ui/icons/Cloud";
 // layout for this page
 import Admin from "layouts/Admin.js";
 // core components
+import GridItem from "components/Grid/GridItem.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import Table from "components/Table/Table.js";
+import Tasks from "components/Tasks/Tasks.js";
+import CustomTabs from "components/CustomTabs/CustomTabs.js";
+import Danger from "components/Typography/Danger.js";
+import Card from "components/Card/Card.js";
+import CardHeader from "components/Card/CardHeader.js";
+import CardIcon from "components/Card/CardIcon.js";
+import CardBody from "components/Card/CardBody.js";
+import CardFooter from "components/Card/CardFooter.js";
+
+import { bugs, website, server } from "variables/general.js";
+
 import {
-  chartOptions,
-  parseOptions,
-  chartExample1,
-  chartExample2,
+  dailySalesChart,
+  emailsSubscriptionChart,
+  completedTasksChart,
 } from "variables/charts.js";
 
-import Header from "components/Headers/Header.js";
+import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
 
-const Dashboard = (props) => {
-  const [activeNav, setActiveNav] = React.useState(1);
-  const [chartExample1Data, setChartExample1Data] = React.useState("data1");
-
-  if (window.Chart) {
-    parseOptions(Chart, chartOptions());
-  }
-
-  const toggleNavs = (e, index) => {
-    e.preventDefault();
-    setActiveNav(index);
-    setChartExample1Data("data" + index);
-  };
+function Dashboard() {
+  const useStyles = makeStyles(styles);
+  const classes = useStyles();
   return (
-    <>
-      <Header />
-      {/* Page content */}
-      <Container className="mt--7" fluid>
-        <Row>
-          <Col className="mb-5 mb-xl-0" xl="8">
-            <Card className="shadow">
-              <CardHeader className="bg-transparent">
-                <Row className="align-items-center">
-                  <div className="col">
-                    <h6 className="text-uppercase text-light ls-1 mb-1">
-                      Overview
-                    </h6>
-                    <h2 className="text-white mb-0">Sales value</h2>
-                  </div>
-                  <div className="col">
-                    <Nav className="justify-content-end" pills>
-                      <NavItem>
-                        <NavLink
-                          className={classnames("py-2 px-3", {
-                            active: activeNav === 1,
-                          })}
-                          href="#pablo"
-                          onClick={(e) => toggleNavs(e, 1)}
-                        >
-                          <span className="d-none d-md-block">Month</span>
-                          <span className="d-md-none">M</span>
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink
-                          className={classnames("py-2 px-3", {
-                            active: activeNav === 2,
-                          })}
-                          data-toggle="tab"
-                          href="#pablo"
-                          onClick={(e) => toggleNavs(e, 2)}
-                        >
-                          <span className="d-none d-md-block">Week</span>
-                          <span className="d-md-none">W</span>
-                        </NavLink>
-                      </NavItem>
-                    </Nav>
-                  </div>
-                </Row>
-              </CardHeader>
-              <CardBody>
-                {/* Chart */}
-                <div className="chart">
-                  <Line
-                    data={chartExample1[chartExample1Data]}
-                    options={chartExample1.options}
-                    getDatasetAtEvent={(e) => console.log(e)}
+    <div>
+      <GridContainer>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="warning" stats icon>
+              <CardIcon color="warning">
+                <Icon>content_copy</Icon>
+              </CardIcon>
+              <p className={classes.cardCategory}>Used Space</p>
+              <h3 className={classes.cardTitle}>
+                49/50 <small>GB</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <Danger>
+                  <Warning />
+                </Danger>
+                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  Get more space
+                </a>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="dark" stats icon>
+              <CardIcon color="dark">
+                <Store />
+              </CardIcon>
+              <p className={classes.cardCategory}>Revenue</p>
+              <h3 className={classes.cardTitle}>$34,245</h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <DateRange />
+                Last 24 Hours
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="danger" stats icon>
+              <CardIcon color="danger">
+                <Icon>info_outline</Icon>
+              </CardIcon>
+              <p className={classes.cardCategory}>Fixed Issues</p>
+              <h3 className={classes.cardTitle}>75</h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <LocalOffer />
+                Tracked from Github
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
+                <Accessibility />
+              </CardIcon>
+              <p className={classes.cardCategory}>Followers</p>
+              <h3 className={classes.cardTitle}>+245</h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <Update />
+                Just Updated
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+      </GridContainer>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="success">
+              <ChartistGraph
+                className="ct-chart"
+                data={dailySalesChart.data}
+                type="Line"
+                options={dailySalesChart.options}
+                listener={dailySalesChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Daily Sales</h4>
+              <p className={classes.cardCategory}>
+                <span className={classes.successText}>
+                  <ArrowUpward className={classes.upArrowCardCategory} /> 55%
+                </span>{" "}
+                increase in today sales.
+              </p>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> updated 4 minutes ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="warning">
+              <ChartistGraph
+                className="ct-chart"
+                data={emailsSubscriptionChart.data}
+                type="Bar"
+                options={emailsSubscriptionChart.options}
+                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
+                listener={emailsSubscriptionChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
+              <p className={classes.cardCategory}>Last Campaign Performance</p>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> campaign sent 2 days ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="dark">
+              <ChartistGraph
+                className="ct-chart"
+                data={completedTasksChart.data}
+                type="Line"
+                options={completedTasksChart.options}
+                listener={completedTasksChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Completed Tasks</h4>
+              <p className={classes.cardCategory}>Last Campaign Performance</p>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> campaign sent 2 days ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+      </GridContainer>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={6}>
+          <CustomTabs
+            title="Tasks:"
+            headerColor="dark"
+            tabs={[
+              {
+                tabName: "Bugs",
+                tabIcon: BugReport,
+                tabContent: (
+                  <Tasks
+                    checkedIndexes={[0, 3]}
+                    tasksIndexes={[0, 1, 2, 3]}
+                    tasks={bugs}
                   />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xl="4">
-            <Card className="shadow">
-              <CardHeader className="bg-transparent">
-                <Row className="align-items-center">
-                  <div className="col">
-                    <h6 className="text-uppercase text-muted ls-1 mb-1">
-                      Performance
-                    </h6>
-                    <h2 className="mb-0">Total orders</h2>
-                  </div>
-                </Row>
-              </CardHeader>
-              <CardBody>
-                {/* Chart */}
-                <div className="chart">
-                  <Bar
-                    data={chartExample2.data}
-                    options={chartExample2.options}
+                ),
+              },
+              {
+                tabName: "Website",
+                tabIcon: Code,
+                tabContent: (
+                  <Tasks
+                    checkedIndexes={[0]}
+                    tasksIndexes={[0, 1]}
+                    tasks={website}
                   />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-        <Row className="mt-5">
-          <Col className="mb-5 mb-xl-0" xl="8">
-            <Card className="shadow">
-              <CardHeader className="border-0">
-                <Row className="align-items-center">
-                  <div className="col">
-                    <h3 className="mb-0">Page visits</h3>
-                  </div>
-                  <div className="col text-right">
-                    <Button
-                      color="primary"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                      size="sm"
-                    >
-                      See all
-                    </Button>
-                  </div>
-                </Row>
-              </CardHeader>
-              <Table className="align-items-center table-flush" responsive>
-                <thead className="thead-light">
-                  <tr>
-                    <th scope="col">Page name</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col">Unique users</th>
-                    <th scope="col">Bounce rate</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">/argon/</th>
-                    <td>4,569</td>
-                    <td>340</td>
-                    <td>
-                      <i className="fas fa-arrow-up text-success mr-3" /> 46,53%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/index.html</th>
-                    <td>3,985</td>
-                    <td>319</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                      46,53%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/charts.html</th>
-                    <td>3,513</td>
-                    <td>294</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                      36,49%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/tables.html</th>
-                    <td>2,050</td>
-                    <td>147</td>
-                    <td>
-                      <i className="fas fa-arrow-up text-success mr-3" /> 50,87%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/profile.html</th>
-                    <td>1,795</td>
-                    <td>190</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-danger mr-3" />{" "}
-                      46,53%
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-            </Card>
-          </Col>
-          <Col xl="4">
-            <Card className="shadow">
-              <CardHeader className="border-0">
-                <Row className="align-items-center">
-                  <div className="col">
-                    <h3 className="mb-0">Social traffic</h3>
-                  </div>
-                  <div className="col text-right">
-                    <Button
-                      color="primary"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                      size="sm"
-                    >
-                      See all
-                    </Button>
-                  </div>
-                </Row>
-              </CardHeader>
-              <Table className="align-items-center table-flush" responsive>
-                <thead className="thead-light">
-                  <tr>
-                    <th scope="col">Referral</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col" />
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Facebook</th>
-                    <td>1,480</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">60%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="60"
-                            barClassName="bg-gradient-danger"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Facebook</th>
-                    <td>5,480</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">70%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="70"
-                            barClassName="bg-gradient-success"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Google</th>
-                    <td>4,807</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">80%</span>
-                        <div>
-                          <Progress max="100" value="80" />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Instagram</th>
-                    <td>3,678</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">75%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="75"
-                            barClassName="bg-gradient-info"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">twitter</th>
-                    <td>2,645</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">30%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="30"
-                            barClassName="bg-gradient-warning"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </>
+                ),
+              },
+              {
+                tabName: "Server",
+                tabIcon: Cloud,
+                tabContent: (
+                  <Tasks
+                    checkedIndexes={[1]}
+                    tasksIndexes={[0, 1, 2]}
+                    tasks={server}
+                  />
+                ),
+              },
+            ]}
+          />
+        </GridItem>
+        <GridItem xs={12} sm={12} md={6}>
+          <Card>
+            <CardHeader color="warning">
+              <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
+              <p className={classes.cardCategoryWhite}>
+                New employees on 15th September, 2016
+              </p>
+            </CardHeader>
+            <CardBody>
+              <Table
+                tableHeaderColor="warning"
+                tableHead={["ID", "Name", "Salary", "Country"]}
+                tableData={[
+                  ["1", "Dakota Rice", "$36,738", "Niger"],
+                  ["2", "Minerva Hooper", "$23,789", "Curaçao"],
+                  ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
+                  ["4", "Philip Chaney", "$38,735", "Korea, South"],
+                ]}
+              />
+            </CardBody>
+          </Card>
+        </GridItem>
+      </GridContainer>
+    </div>
   );
-};
+}
 
 Dashboard.layout = Admin;
 
